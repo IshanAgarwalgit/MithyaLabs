@@ -73,7 +73,6 @@ const AddEdit = () => {
     }
     else{
       handleUpdateSubmit()
-      handleCancelSubmit()
     }}}>
       <label>Name : </label>
 			<input type="text" name="name" value={currentUser.name} onChange={handleInputChange} required/>
@@ -88,7 +87,7 @@ const AddEdit = () => {
       {
         !editing ? (<button >Add</button>) : 
         (<><button >Update</button>
-        <button >Cancel</button></>)
+        <button onClick={handleCancelSubmit}>Cancel</button></>)
       }
     </form>
     <ViewUsers users={users} editRow={editRow} deleteUser={deleteUser}/>
